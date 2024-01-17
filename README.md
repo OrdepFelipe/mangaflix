@@ -2,4 +2,7 @@
 
 
 ## Primeira Etapa  
-1 - Configuração do ambiente de desenvolvimento
+- Configuração do ambiente de desenvolvimento
+## Segunda Etapa  
+- Estrturação do HTML e estilização do Hero;
+- Importação da fonte externa;
