@@ -6,3 +6,6 @@
 ## Segunda Etapa  
 - Estrturação do HTML e estilização do Hero;
 - Importação da fonte externa;
+## Terceira Etapa  
+-   Criação do menu de navegação
+-   Criação da área de planos
