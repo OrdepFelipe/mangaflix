@@ -4,6 +4,19 @@ const buttons = document.querySelectorAll('[data-tab-button]');
     //seleciono todas as div que possuem o atributo
     const questions = document.querySelectorAll('[data-faq-question]');
 
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;// com isso consigo pegar o tamanho de um elemento
+
+
+    window.addEventListener('scroll', function(){
+        const posicaoAtual = window.scrollY;
+        if(posicaoAtual < alturaHero){
+            ocultaElementosDoHeader();
+        }else{
+            exibeElementosDoHeader();
+        }
+    })
+
     for(let i = 0; i < buttons.length; i++){
         buttons[i].addEventListener('click', function(botao){
             const abaAlvo = botao.target.dataset.tabButton;
@@ -43,4 +56,14 @@ function escondeTodasAbas(){
     for(let i = 0; i < tabsContainer.length; i++){
         tabsContainer[i].classList.remove('shows__list--active');
     }
+}
+
+function ocultaElementosDoHeader(){
+    const header = document.querySelector('.header');
+    header.classList.add('header--is-hidden');
+}
+
+function exibeElementosDoHeader(){
+    const header = document.querySelector('.header');
+    header.classList.remove('header--is-hidden');
 }

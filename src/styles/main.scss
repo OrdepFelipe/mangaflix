@@ -4,6 +4,8 @@
 @use 'plans';
 @use 'available-devices';
 @use 'faq';
+@use 'footer';
+@use 'header';
 
 @font-face{
     font-family: Avenir;
@@ -22,6 +24,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, 'sans-serif';
+    list-style: none;
 }
 
 body{
@@ -43,6 +46,14 @@ body{
 
 .text--big{
     @include text(18px);
+
+    .title{
+        @include title;
+    
+        @media (max-width:768px){
+            @include title(24px);
+        }
+    }
 }
 
 .text{
@@ -55,14 +66,34 @@ body{
 
 .title--big{
     @include title(44px);
+
+    .title{
+        @include title;
+    
+        @media (max-width:768px){
+            @include title(26px);
+        }
+    }
 }
 
 .title{
     @include title;
+
+    @media (max-width:768px){
+        @include title(24px);
+    }
 }
 
 .title--small{
     @include title(28px);
+
+    .title{
+        @include title;
+    
+        @media (max-width:768px){
+            @include title(22px);
+        }
+    }
 }
 
 .link-text{
@@ -72,16 +103,45 @@ body{
 }
 
 .button{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
     color: variaveis.$corTextoSecundario;
-    background-color: #6421ff;
+    background-color: variaveis.$corDeFundoBotaoPrimario;
     text-transform: uppercase;
     border-radius: 4px;
     margin-top: 2vw;
     margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+    &:hover{
+        /**lighten é uma função do sass onde passamos como parâmetro a cor e informamos quantos porcentos queremos clareá-la**/
+        background-color: lighten( variaveis.$corDeFundoBotaoPrimario, 3%);
+    }
+
+    &--secondary{
+        background-color: variaveis.$corDeFundoBotaoSecundario;
+        border-color: variaveis.$corDeFundoBotaoSecundario;
+
+        &:hover{
+            background-color: lighten( variaveis.$corDeFundoBotaoSecundario, 3%);
+        }
+    }
+
+    &--dark{
+        background-color: rgba(variaveis.$corDeFundoBotaoDark,0.8);
+        border: variaveis.$corTextoSecundario;
+
+        &:hover{
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
 }
 
 .image-text-section{
@@ -89,6 +149,10 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+
+    @media(max-width:768px){
+        display: block;
+    }
 
     img{
         max-width: 100%;
@@ -118,6 +182,12 @@ body{
             flex-direction: column;
             justify-content: center;
             width: calc(50% - 5.6vw);
+
+            @media(max-width:768px){
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
         }
     }
 }

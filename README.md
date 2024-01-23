@@ -9,3 +9,11 @@
 ## Terceira Etapa  
 -   Criação do menu de navegação
 -   Criação da área de planos
+-   Elaboração da lógica em JavaScript, a fim de criar uma página interativa
+## Quarta Etapa  
+-   Estruturação do HTML e estilização da parte do Banner com alguns informativos
+## Quinta Etapa  
+-   Estruturação do HTML e estilização do footer
+
+## Sexta Etapa  
+-  Aplicamos algumas queries para tornar o site mais responsivo

@@ -11,6 +11,10 @@
         gap: 24px;
         border-radius: 4px;
 
+    @media(max-width:768px){
+        grid-template-columns: 1fr 1fr;
+    }
+
         &--active{
             display: grid;
         }
