@@ -1,5 +1,12 @@
 # PROJETO 4 - Cópia Landing Page da Disney Plus  
 
+## Tecnologias e ferramentas utilizadas
+
+- HTML
+- Sass
+- JavaScript
+- Gulp
+
 
 ## Primeira Etapa  
 - Configuração do ambiente de desenvolvimento
